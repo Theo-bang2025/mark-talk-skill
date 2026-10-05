@@ -1,0 +1,9 @@
+tests/_*-output.txt
+tests/_*-baseline.txt
+tests/_*-v2.txt
+.validator-deps/
+tests/_skill_smoke/
+docs/superpowers/plans/
+findings.md
+progress.md
+task_plan.md

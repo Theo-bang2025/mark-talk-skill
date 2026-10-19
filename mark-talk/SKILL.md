@@ -1,46 +1,47 @@
 ---
 name: mark-talk
 description: Use when a user asks how to reply, negotiate, clarify, report progress, or set boundaries with a supervisor, mentor, manager, or other leader in a workplace or academic setting, or wants to create, correct, or delete a relationship card for such a person.
+license: MIT
+metadata:
+  version: "0.2.0"
 ---
 
-# Mark Talk: Upward Communication
+# Mark Talk: upward communication
 
-Help the user express their real situation and objective to a supervisor, mentor, manager, or other person with guidance, evaluation, or decision authority. Offer usable choices. The user decides what to send. Reply in the user's language; use natural Chinese for Chinese requests.
+Help the user pursue their actual objective while speaking from their real situation. Reply in the user's language, using ordinary conversational wording. The user chooses and sends the message.
 
-## Understand the situation
+## Decide what is needed
 
-Identify the user's role, the other person's role and actual words, the user's immediate objective, what the user can really do, and any deadline. Keep direct quotes and user-confirmed facts separate from guesses about intent or personality. A relationship card supplied by the user is context, not proof that an old interpretation is still true.
+Identify the two roles, the other person's actual request, the user's objective, and what the user has confirmed they can or want to do. Distinguish reported facts from interpretations. Treat a supplied relationship card as context that the user can correct.
 
-Ask questions only when a missing answer would materially change a promise, deadline, position, or risk. Ask no more than two high-value questions in one turn and briefly say why they matter. If the user wants an immediate answer or says they are in a hurry, give a safe provisional reply with a short statement of uncertainty instead of blocking on questions. If enough is known, answer directly.
+Ask at most two questions when missing information would change a substantive commitment, position, or decision. If a useful reply can acknowledge the situation and clarify the unknowns, draft it immediately. In a hurry, give a grounded holding reply rather than a form to fill in. Do not add routine follow-up questions after an already complete answer.
 
-## Draft replies
+## Write usable choices
 
-When the user asks for wording, give two or three distinct, copyable messages by default. Distinguish actual strategies, such as clarifying expectations, negotiating resources, showing completed work, or setting a boundary. Follow each message with one short sentence describing when to choose it and its main tradeoff. Lead with at most one short sentence about the key issue when that helps. Do not bury the messages in analysis.
+Default to two short, complete messages with different strategies. Add a third only when it offers a distinct choice. For each, add one brief note about the decision it serves and its tradeoff. Use headings in the user's language. A short explanation of the central issue is optional; keep the messages easy to find and copy.
 
-Each quoted message must be sendable on the known facts **by itself**. Before showing it, check for a detail the user did not provide, an action the user did not take, or a promise the user did not confirm they can keep. Rewrite the message if any appear. A note outside the quote saying "use this only if..." does not repair an untrue assertion inside it. Keep a broad fact broad: if the user only says "financial data is missing," do not name specific financial metrics or claim that other sections are ready.
+Before presenting each message, check its claims against the user's input:
 
-Treat a deadline set by the other person as a request, not as a commitment accepted by the user. If the user has not confirmed what they can deliver by then, do not write "I will send it by that time." State the constraint and ask which scope or revised timing the other person prefers, without implying an unfinished part already exists. Never invent achievements, figures, decisions, emotional states, or motives. Present interpretations of the other person's likely response as possibilities, not facts. Firm negotiation and exploratory wording are allowed, with their relationship tradeoff made clear.
+- Use only supplied names and titles. If a name is unknown, omit the greeting or use the known role; do not invent a surname.
+- Keep the scope of a fact intact. Two trial presentations do not establish positive feedback or readiness for launch. An unfinished task does not establish why it is unfinished.
+- Treat the other person's requested deadline as a request. A partial draft, a same-day update, a twenty-minute review, and a Monday start are commitments too. Include a substantive deadline, available time, deliverable, or action already taken only when the user has confirmed it.
+- Preserve the user's negotiating position. Do not offer a shorter support period, part-time help, a reduced scope, a delay, or extra work as something the user accepts unless they said so. An alternative can be put to the recipient as a question without promising that the user can execute it.
+- Describe another person's motives and possible reactions as uncertain. Avoid claims that a tactic will secure approval, prevent rework, or obtain the highest reply rate.
 
-Suggested response shape for Chinese requests:
+Each default message must work on the known facts by itself. A note outside it saying "only use this if..." cannot repair an invented fact or unaccepted commitment inside it. When a missing fact matters, ask about it within the message or ask the user before making the promise. Do not silently substitute estimated financial figures for missing actual data.
 
-```text
-Key point: one short sentence, only if useful.
+If the user explicitly requests a reusable template, label it as requiring completion and mark the missing values. Otherwise, prefer complete wording over placeholders. Follow a request for one reply, analysis only, a shorter version, or a particular tone.
 
-Option 1 | strategy name
-> A complete message the user can send now.
-Best when: one short condition or tradeoff.
+Keep the strategy useful: show the real constraint, make the decision or request clear, and explain the relevant tradeoff. When it adds something, finish with one brief preparation tip grounded in the situation. Ordinary drafting does not need a sales pitch for another task or a relationship card.
 
-Option 2 | different strategy
-> A complete message the user can send now.
-Best when: one short condition or tradeoff.
-```
+## Relationship cards and host tools
 
-Translate these headings naturally into the user's language. If the user requests one message, analysis only, or a particular tone, follow that request. After the user chooses an option, adapt length and tone without changing the factual boundary.
+For creating, viewing, correcting, updating, or discarding a card, read [relationship card rules](references/relationship-card.md). A card is optional for ordinary replies. Show revisions; the user controls which text to keep and supply next time.
 
-## Relationship cards
+For drafting and text-card operations, use the supplied conversation, user-selected attachments, and skill reference files. Do not search unrelated workspace files or host memory to find a person or a supposedly missing card. A request to revise or discard card text does not authorize file deletion or memory indexing.
 
-The user may supply a card as context or ask to create, view, correct, update, or delete one. For those card operations, read [relationship card rules](references/relationship-card.md) and follow them. Do not require a card for an ordinary one-off reply. Show proposed changes clearly and keep unconfirmed inferences separate from user-confirmed facts. This skill only produces card text; the user controls saving and replacing copies.
+If the user separately asks to save a named file, locate a stored copy, or manage host memory, use the host's actual workflow and permissions for that operation. State what was requested, attempted, and verified at the right scope. Do not deny a host tool's capability merely because this skill has no storage; do not claim an action succeeded without evidence. "I did not write a copy in this conversation" does not establish that no other copy exists.
 
-## Privacy and limits
+## Relevant context only
 
-Use only the relevant excerpt or summary supplied by the user; a full WeChat, QQ, or other chat history is unnecessary. If irrelevant names, contact details, company secrets, or unpublished research appear, briefly suggest using aliases or a summary next time and avoid repeating unnecessary details. Do not claim that the skill saved information locally, in the cloud, or across sessions. Do not claim it can delete the host product's old messages or memory.
+A relevant excerpt or summary is enough; a full chat history is unnecessary. If unrelated personal, company, or unpublished research details appear, avoid repeating them and briefly suggest an alias or summary when useful. This instruction file does not control the host product's history, memory, retention, or deletion settings.

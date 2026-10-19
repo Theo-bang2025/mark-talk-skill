@@ -1,10 +1,10 @@
-# Relationship cards: user-controlled context
+# Relationship cards: text the user controls
 
-A relationship card is plain text saved and supplied by the user. It keeps objectives and known context for different people separate. The skill can use only a card supplied in the current conversation. It has no independent permission to read, write, or erase memory across conversations. Render the card in the user's language; use natural Chinese field labels for Chinese users.
+A card is a compact piece of context the user can inspect, edit, save, and supply in another conversation. Creating card text does not create a host memory entry. Saving a copy alone does not make it available in a future chat: the user must provide it there. Use the user's language for the card and explanations.
 
-## Complete card schema
+## The complete card
 
-Keep these eight fields, in this order, when creating or fully returning a card:
+Return these eight fields when creating, viewing, or revising a card:
 
 ```text
 Target alias and role:
@@ -17,22 +17,26 @@ Current open matter:
 Last updated:
 ```
 
-For a Chinese user, translate the labels naturally. For an unknown value write the equivalent of "not provided"; for an empty facts or interpretations field write the equivalent of "none". Do not fill a field by inferring a personality, preference, or role from a short message. A user-confirmed fact is something the user explicitly reports or confirms, not something independently verified by the skill. Keep each interpretation tied to a specific reported interaction. Do not retain irrelevant sensitive details.
+Translate the labels naturally. Write "not provided" for unknown information and "none" for an empty facts or interpretations field. Keep the field when its last entry is removed. Use an explicitly available host date for the update; otherwise write "not recorded". User-confirmed means reported or confirmed by the user, not independently verified.
 
-## Create and view
+Do not infer a personality, preference, or feeling from one short message. Keep each tentative interpretation tied to the reported interaction that supports it. A new fact invalidating a guess does not establish the opposite guess.
 
-When asked to create a card, use the facts already supplied. Ask at most one question if its answer is essential for future use; otherwise leave unknown fields unfilled. When asked to create or view, show the complete card. Do not add reply options unless the user also asks for a message to send. Do not turn every ordinary conversation into an automatic card update.
+## Create, view, or revise
 
-## Correct, update, or remove a card entry
+For creation, use what is supplied and leave gaps visible. Ask at most one essential question. Return a card, not several competing cards or reply options, unless the user asks for both tasks.
 
-1. Identify the exact old field and content, the user's requested change, and the user-provided evidence. An explicit correction from the user takes priority over an old card or model inference.
-2. Show a short change summary: old content -> proposed replacement or removal. Cite the user's new statement as the reason. If new evidence only invalidates a guess, do not infer the opposite personality trait or feeling.
-3. Return the **complete updated card**, preserving every field and every item the user did not ask to change. If the last tentative interpretation is removed, keep that field and mark it "none" instead of silently omitting it.
-4. Say the new card is for the user to review and save. Only replacing the user's saved copy makes it available for a future conversation. If the user says "show me first," mark it as a proposal awaiting their confirmation. If the user has already asked to delete a particular entry, present the updated card without another approval step.
-5. For a deletion, say "This updated card omits the entry" rather than "I deleted it" as if stored data was erased. End the response with an explicit sentence in the user's language: the new card does not erase old host conversations, host memory, attachments, or separately saved copies. The deletion response is incomplete without this sentence.
+For revision, show a short summary of the old entry, replacement or removal, and the user's basis for it. Return the complete new card, preserving unrelated content. If the user says "show me first," mark the result as a proposal; do not describe it as adopted or stored. If they already requested a specific removal, provide the revised text directly.
 
-If a new statement conflicts with an old user-confirmed fact, show the conflict and ask which statement to retain. Do not silently overwrite it. Use a date explicitly available from the host for "last updated"; if none is available, write the equivalent of "not recorded".
+An explicit correction takes priority over an old model inference. If two user-confirmed facts genuinely conflict, identify the conflict and ask which to retain. Do not remove a separate fact, such as weekly discussion, merely because a new fact specifies when progress should be sent.
 
-## Delete the whole card
+Say the card is ready for the user to review, save, and provide next time. Do not write host memory frontmatter, indexes, or a persistence plan during a text-card request.
 
-When the user asks to discard a whole card, stop relying on it in the current conversation and do not repeat its contents. Explain that the skill has no independent card storage and cannot delete a copy saved by the user or the host product's old messages and memory. The user must remove those from their respective locations. Future conversations may still receive old information from the user or host settings; do not promise to remember this deletion across sessions. Ordinary communication help remains available without a card.
+## Remove an entry
+
+Return the complete card with that entry omitted. State that the revised text omits it, rather than implying stored data was erased. Include a short, explicit sentence that this revision does not erase host history, host memory, attachments, or separately saved copies.
+
+## Discard the whole card
+
+Stop using it in the current conversation and do not repeat its contents. If it is not in the supplied context, acknowledge the request without reconstructing it or searching for it. Explain the scope once: this text operation does not delete stored files or host history and cannot ensure what information a future chat receives.
+
+Do not search files, claim a memory-store inspection, or infer the absence of other copies. The user may separately ask to manage a particular saved copy through available host tools; follow that distinct request and report only verified results. Ordinary communication help can continue using the facts the user supplies now.

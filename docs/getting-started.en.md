@@ -8,22 +8,22 @@ Install the skill, then try a small communication problem. You do not need to bu
 
 ### Qianwen desktop work mode
 
-A participant used desktop version `5.0.0.268`: enter work mode, paste the repository link, and ask Qianwen to install it. You can send:
+This tree is the 0.3.0 candidate. Candidate installation has not been accepted in Qianwen. Participants reported old GitHub installation and 0.2.0 local import on 5.0.0.268; those records do not verify this candidate.
+
+For candidate use, take the complete `mark-talk/` from the actual source or local candidate ZIP. In a client supporting local import, ask:
 
 ```text
-Please install the mark-talk/ skill directory from https://github.com/Theo-bang2025/mark-talk-skill, including references/relationship-card.md. Tell me the actual installation location, skill name, and version in SKILL.md when installation is complete.
+Install the local mark-talk/ folder I provide, keeping references/upward-methods.md and references/relationship-card.md. Verify SKILL.md says 0.3.0, and report the actual location and all three SHA-256 hashes. State anything you cannot observe.
 ```
 
-Then check the following in your client:
+Do not substitute GitHub main for a candidate that has not been synchronized. For public 0.2.0 use the [fixed commit folder](https://github.com/Theo-bang2025/mark-talk-skill/tree/82dd114484f0a92068c6096c4843a68202083807/mark-talk); it has no bundled methods file.
 
-1. Find `mark-talk` in the skill list and check that it is enabled. Complete any installation confirmation shown by the client.
-2. Check that the installed folder contains `SKILL.md` and `references/relationship-card.md`. The repository's README and tests are not the skill instructions to load.
-3. Start a new work-mode conversation. If the skill list has not refreshed, restart the client and try again.
-4. Send an example below and look for a visible skill invocation marker. Two reply options alone do not prove that the skill loaded.
+1. Import through your client's actual local-skill interface; enable only the intended Mark Talk version.
+2. Check folder nesting and all three files. Root README/tests are not skill instructions. Hashes identify an iteration more precisely than the version string.
+3. Refresh/reopen and inspect the skill list, then open a new work-mode conversation.
+4. Look for visible core/reference invocation evidence. Two replies do not prove loading. Naming Mark Talk is useful in everyday use; automatic-activation evaluation uses unchanged inputs.
 
-For manual installation, [download the repository ZIP](https://github.com/Theo-bang2025/mark-talk-skill/archive/refs/heads/main.zip), extract it, and find `mark-talk/`. If your client accepts local skills, import that entire folder with its reference file. The participant did not separately test this manual route.
-
-The [official QwenWork guide](https://help.aliyun.com/zh/qwenwork/skills) documents GitHub installation and the local `~/.qwenworkcn/skills/` folder. QwenWork and Qianwen desktop work mode may expose different interfaces; follow the client you actually have.
+The [official QwenWork guide](https://help.aliyun.com/zh/qwenwork/skills), checked on 2026-10-21, describes GitHub/local installation and `~/.qwenworkcn/skills/`. Interfaces differ across products. If the actual client cannot import, record the limitation rather than claim success.
 
 ### Codex
 
@@ -32,6 +32,7 @@ The [current official documentation](https://learn.chatgpt.com/docs/build-skills
 ```text
 ~/.agents/skills/mark-talk/SKILL.md
 ~/.agents/skills/mark-talk/references/relationship-card.md
+~/.agents/skills/mark-talk/references/upward-methods.md
 ```
 
 Open a new conversation and ask to use `$mark-talk`. Earlier project trials used a `.codex/skills` directory; that is a historical setup, not a recommendation to use the old path in every client.
@@ -72,27 +73,31 @@ This asks what the supervisor needs to see. It does not promise that an unfinish
 
 The first asks about the underlying deadline. The second makes the boundary more explicit. Neither assumes you can start tomorrow, take a call now, or deliver on Monday.
 
-### Make a resource request concrete
+### Add facts, choose, then refine
 
-> I'm leading an internal tool that should launch next month. There are only two of us, including a part-time colleague. I want one tester for two weeks.
+> **You:** I'm leading an internal tool planned for next month. It's just me and a part-time colleague. I'd like one tester for two weeks; help me explain the need.
+>
+> **Assistant:** What have you already checked, and what should the tester cover? Those facts make your preparation and the gap concrete.
+>
+> **You:** We've tested the core flow ourselves. Cross-department permissions are untested, and neither of us has capacity for permissions and regression testing.
+>
+> **One approach:** I'd like one tester for two weeks for cross-department permissions and regression testing. We've tested the core flow, but my part-time colleague and I cannot cover this part. With launch planned next month, could you help arrange the support?
+>
+> **You:** Use that version. Shorter, like a chat. Don't give me two more options.
+>
+> **Assistant:** Could we get one tester for two weeks for permissions and regression testing? We've tested the core flow, but my part-time colleague and I can't cover this part. Could you help arrange someone?
 
-A possible request is:
+The added basis comes from your actual work and gap, not invented test counts, positive feedback, risk probabilities, start dates or concessions. After selection the assistant revises one draft. You may also ask for a short initial request without following this exact question sequence.
 
-> I'd like to request one tester for two weeks to help validate the internal tool before launch. We're planning to launch next month, and the project currently has only me and a part-time colleague. Could we arrange that testing support?
+### Change the voice while keeping the position
 
-You can ask the assistant for another approach that helps the manager make a decision. If you have not accepted a shorter assignment, part-time support, or a later launch, the assistant should not offer those concessions on your behalf. Real testing scope and workload estimates can strengthen the request when available.
-
-### Make it sound like you
-
-After choosing an option, say:
-
-> Make this shorter and less like a formal status report. Keep the request for one person for two weeks and the launch next month.
+> Make it firmer. Keep one tester for two weeks. Don't offer part-time support or choose a start date for me.
 
 For example:
 
-> Could we borrow one tester for two weeks? The tool launches next month, and it's currently just me and a part-time colleague. I'd like to get the pre-launch testing covered.
+> I need to request one tester for two weeks for permissions and regression testing. We've tested the core flow, but neither of us has capacity to cover this part. Could you arrange the support?
 
-A change in tone should preserve the facts. It should not add a claim that test cases are already prepared. You can also ask for one message, firmer wording, or analysis before drafting.
+Firmer wording does not mean refusing the whole assignment; softer wording does not authorize a concession. Methods guide internal thinking rather than impose four sections or a repeated opening. Email, familiar chat and your own wording can be organized differently. Random synonym swaps do not make a message natural, and polishing must preserve facts, constraints, position and commitments.
 
 ## Use a relationship card
 
@@ -139,14 +144,15 @@ To withdraw an entire card, say:
 
 > Stop using this entire card in this conversation, and don't repeat its contents.
 
-The assistant should stop using it in the current conversation without restating the fields. A future chat may still receive old information from you or the host. Managing a particular saved file or a host memory entry is a separate operation with its own actual tools and verifiable result.
+The assistant should stop using it in the current conversation without restating the fields or offering a new task based on an old open matter. Facts you supply anew can be used without restoring the old card. A future chat may still receive old information from you or the host. Managing a particular saved file or a host memory entry is a separate operation with its own actual tools and verifiable result.
 
 ## Troubleshooting
 
 | What you see | What to check |
 | --- | --- |
-| No skill in the list | Installation support, folder nesting, and both required files. Do not assume an unsupported client can import it. |
+| No skill in the list | Installation support, folder nesting, and all three candidate files. Do not assume an unsupported client can import it. |
 | An ordinary chat response | Look for invocation evidence. For everyday use, name Mark Talk; evaluate automatic activation separately. |
+| Generic requests or updates | Check that the methods file was imported/read; supply actual work or the concrete gap. No full book is needed. |
 | Incomplete card updates | Check that the reference file was imported, and supply the current full card. |
 | A new chat lacks the old context | Provide your saved card again. This version has no separate database. |
 | An invented deadline or work status | Do not send it. Identify the sentence and ask for a grounded rewrite; an anonymous report helps the project. |

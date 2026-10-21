@@ -1,5 +1,17 @@
 # 更新记录 / Changelog
 
+## 0.3.0 候选 / Candidate · 2026-10-21
+
+新增随包小型向上沟通方法库，覆盖进展、求助、建议、标准、资源、约束、批评和确认。核心按当前任务选方法，必要时追问，补充后更新，选稿后默认只改一条。方法用于组织思路，最终表达按关系、媒介和个人习惯变化，允许省略和调序；润色不得改变事实、立场、约束或承诺。
+
+细化已做行动、时间交付、可用性/小额外工作和让步检查；不做笼统“全部无承诺”认证。整卡停用后也不再引用旧事项邀请下一任务；明确文本作废与指定存储副本的不同入口。
+
+新增六个迁移/多轮任务、反向可用性与自然表达诊断；修订评分漏判、记忆/工具证据和人类体验记录。默认验收为0.2.0/候选比较，预定29新会话40响应及10次人类任务反馈。双语教程展示补充→选稿→改口吻。开发结果和仍待取得的真实宿主/人类证据见[候选报告](tests/reports/2026-10-21-0.3.0-candidate.md)。尚未创建正式发布标签或声称千问候选验收通过。
+
+Added eight bundled upward-communication methods, selective clarification, fact-aware revisions and convergence after selection. Methods guide thinking; messages follow relationship, medium and the user's voice. Polishing preserves facts, position, constraints and commitments. Checks now distinguish completed actions, delivery, availability/extra effort and concessions. Withdrawn cards no longer supply old matters for follow-up offers; text withdrawal and specifically requested storage operations are separate.
+
+Added transfer/dialogue scripts and diagnostics, updated evidence/measurement guidance and bilingual worked tutorials. The planned old/candidate campaign is 29 conversations / 40 responses plus ten human task evaluations. Developer replay, actual host loading and human preference are reported separately. This is a candidate, without a formal release tag or claimed Qianwen acceptance.
+
 ## 0.2.0 · 2026-10-19
 
 复核首轮千问用户内测后，重点修订事实与承诺边界。正文中的部分交付、短时完成和资源让步，同样需要用户确认；未知称呼默认省略。关系卡继续作为用户控制的文本，普通操作不主动检索工作区或宿主记忆，动作声明按实际证据限定范围。

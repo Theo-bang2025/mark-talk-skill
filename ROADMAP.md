@@ -1,6 +1,6 @@
 # Mark Talk 发展路线
 
-更新：2026-10-21。用户已认可近期方案，并授权在同项目新聊天实施，交接见 [0.3.0 实施交接](docs/handoffs/2026-10-21-mark-talk-0.3.0.md)。当前可安装版本仍为 `0.2.0`，后续版本号是规划标识，尚未发布。
+更新：2026-10-21。用户已认可近期方案，并授权在同项目新聊天实施，交接见 [0.3.0 实施交接](docs/handoffs/2026-10-21-mark-talk-0.3.0.md)。当前源码为 `0.3.0` 候选，已有公开版本为 `0.2.0`。候选工程和验收证据见[候选报告](tests/reports/2026-10-21-0.3.0-candidate.md)；千问与人类门槛尚未完成，不视为正式发布。
 
 ## 目标
 
@@ -14,7 +14,7 @@
 | --- | --- | --- |
 | 首版，2026-10-05 | 向上沟通 Skill、少量回复选择、文本关系卡、开源文档和测试 | 单次内测不能证明稳定收益；原版无正式版本号，现以回溯标签 `v0.1.0` 保全 |
 | 第二版 `0.2.0`，2026-10-19 | 事实/承诺检查、卡片边界、双语入门与更中立的评测流程 | 第二轮仍有事实和卡片控制遗漏；缺人类逐项体验反馈、多轮沟通任务与严格隔离 |
-| 当前，2026-10-21 | 两版归档、第二轮原句复核、方法调研与后续设计 | 尚未实施 `0.3.0`；不能把设计示例视为效果验证 |
+| 当前，2026-10-21 | 两版归档、二轮复核、方法调研，0.3.0候选方法库/多轮/停用修复与评测教程 | 开发证据见候选报告；千问与人类体验待验收，示例不算效果验证 |
 
 细节见[第二轮复核](tests/reports/2026-10-21-qwen-round2-review.md)和[版本保全说明](docs/version-history.md)。
 
@@ -78,7 +78,7 @@
 
 ## English overview
 
-Mark Talk stays focused on upward workplace and academic communication. The current release is `0.2.0`; the next versions below are proposals.
+Mark Talk stays focused on upward workplace and academic communication. The existing public release is `0.2.0`; this tree implements a `0.3.0` candidate pending host and human acceptance. Later versions below remain proposals.
 
 - `0.3.0`: practical communication methods, selective clarification, and iterative drafting, with factual and user-control regressions checked alongside usefulness.
 - `0.4.x`: support a work item across preparation, replies, confirmation, and follow-up; add opt-in rehearsal.

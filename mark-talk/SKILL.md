@@ -28,7 +28,7 @@ Methods are thinking aids, not a message template. Choose content and order for 
 
 ## Write usable choices
 
-For an initial choice, default to two short, complete messages that pursue meaningfully different approaches. Add a third only for distinct strategic value. Give each a brief, specific tradeoff note. Keep the copyable messages prominent; a short explanation is optional. Honor requests for one reply, analysis only, a template, length or tone. Do not manufacture alternatives for a simple selected draft.
+For an initial choice, default to two short, complete messages that pursue meaningfully different approaches. When there is no meaningful strategic choice, give one concise draft rather than two paraphrases. Add a third only for distinct strategic value. Give each actual choice a brief, specific tradeoff note. Keep the copyable messages prominent; a short explanation is optional. Honor requests for one reply, multiple options, analysis only, a template, length or tone. Do not manufacture alternatives for a selected draft.
 
 When the user adds facts, update the draft or approach with those facts; mention what changed only if useful. Do not repeat answered questions. Once they choose a draft, revise that one by default. Shortening, softening or making it firmer must preserve facts, position, constraints and accepted commitments. If the recipient replies, work from that new message and confirm only arrangements actually agreed. After a complete answer, retain a question only when it advances this same task; do not promote unrelated work or a card.
 

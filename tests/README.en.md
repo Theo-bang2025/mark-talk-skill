@@ -2,89 +2,58 @@
 
 [中文](README.md) · English
 
-Compare the same host and visible model with Mark Talk disabled and enabled. The goal is to find concrete improvements, failures, and regressions. A small run does not need to prove that the skill works.
+The default campaign compares **0.2.0 with the 0.3.0 candidate** for task usefulness, selective clarification, iteration and natural wording, alongside facts and user control. This is a plan, not a passed result. Controlled inputs are Chinese; translations create a different test and do not establish English performance.
 
-The controlled inputs are Chinese. Keep them unchanged when reproducing this test set; translating them creates a different test and does not establish English performance. This English guide explains the same procedure as the Chinese version. The detailed [AI coach protocol](ai-guide.md), [rubric v2](rubric.md), [case notes](scenarios.md), and [record template](record-template.md) are in Chinese and can be read by a multilingual coach.
-
-## Ask an AI to guide you
+## Ask an AI coach
 
 Use a separate coaching conversation:
 
 ```text
-Read tests/ai-guide.md, tests/README.md, tests/inputs.md, and tests/record-template.md in https://github.com/Theo-bang2025/mark-talk-skill. Confirm you obtained the full files. Guide me in English, one step at a time. Tell me what to do and what evidence to record. Do not fill in settings, actions, or personal judgments you have not observed. The target model uses separate conversations and must not see scoring instructions or earlier reports.
+Read this project's tests/ai-guide.md, tests/README.en.md, tests/dialogue-scenarios.md, tests/inputs.md and tests/record-template.md. Confirm full files and actual old/candidate package identities. Guide me in English one step at a time. Targets use separate contexts and see only the current user input, never fact tables, scoring or historical reports. Do not invent settings, tool actions, measurements or human preferences. Report partial completion honestly.
 ```
 
-The coach can know the procedure. The target model receives only the current case input and, in the skill condition, the installed skill. A scoring conversation should be separate again if you want to conceal condition labels.
+For a local candidate, provide its actual documents/package; do not assume GitHub main includes it.
 
-## Prepare the comparison
+## Fix packages, environment and context
 
-Record the app/version/mode, visible model, operating system, skill commit or file hashes, input set `upward-v1.1`, rubric `v2`, other skills, tools, memory, history-reference settings, and condition order. Write `unknown` or `not visible` when appropriate. Do not infer a backend model from a product name.
+Pin old to `82dd114484f0a92068c6096c4843a68202083807` (`v0.2.0`), candidate to a source commit and all three SHA-256 hashes. A version string alone does not identify an iteration. Install only the corresponding version, refresh/reopen and verify actual files. Candidate adds `references/upward-methods.md`; old has two files.
 
-Freeze the installed files. A download from `main` without a timestamp or hash is not a precise version. Keep app, model, permissions, and inputs the same in both conditions. Use the real skill toggle rather than asking the model to ignore a skill. Restart or refresh the host after a change and observe the actual state.
+Record product/version/mode, visible model and backend uncertainty, OS, sampling, tools, permissions, other skills, memory/history and actual isolation scope in the [template](record-template.md). Unknown stays unknown. Keep settings equal. Do not simulate a switch with an instruction to ignore rules. Freeze files during a run; revisions get new IDs while failures remain.
 
-Keep coaching files, test inputs, scores, and historical reports outside the target workspace and inaccessible to its retrieval tools. Closing a file is not isolation. A new chat can still inherit project memory, global memory, files, or past conversations.
+Keep coaching, scoring, all tests/fact tables and prior answers outside target access. A new chat can inherit memory or files. Use verifiably independent scopes per case/condition; S8/S9-b and each three-turn task share only their own context. Disable memory non-destructively where supported; never delete personal data. If isolation is unverifiable, report an ecological trial. Balanced order cannot erase persistent state.
 
-If the host writes project memory, use a separate empty workspace for each case and condition; S8 and its follow-up S9-b share one. One workspace per condition may allow S8 to contaminate S9-a. Disable memory/history retrieval non-destructively when supported, using the same settings in both conditions. If these controls are unavailable, report an ecological trial with known limits. Do not delete personal data to prepare a test.
+Record automatic injection separately from active retrieval or unknown. Preserve unexpected details as suspected contamination until evidence establishes a source; a diagnostic rerun cannot replace the original.
 
-## Run both conditions
+## Run 29 conversations / 40 responses
 
-For a simple first run, finish `baseline` with the skill off, then `skill` with it on. This order is convenient but may have order effects. With reliable isolation and repeated runs, preassign some runs in the reverse order. Do not change order or stop based on which result looks better.
+Use [dialogue-v1](dialogue-scenarios.md) and unchanged [upward-v1.1](inputs.md):
 
-In **each** condition:
+1. Candidate regression: S1–S7, S8 then same-context S9-b, independent S9-a: **9 / 10**.
+2. Candidate risk repeats: S1, S5, S6 and S8 → S9-b twice more each in fresh contexts: **8 / 10**. Each trajectory totals three runs.
+3. Transfer: T1–T4 single-turn, T5–T6 three-turn, each version: **12 / 20** combined. Old first for T1/T3/T5, candidate first for T2/T4/T6.
 
-1. Copy only the S1 code block from [inputs.md](inputs.md) into a new conversation. Save the full response and visible tool/skill evidence.
-2. Repeat in separate new conversations for S2 through S7.
-3. Start a new conversation for S8. Save its answer, then send S9-b immediately in that same conversation and save the second answer.
-4. Start another new conversation for S9-a.
+Send only the current payload without labels or explicit skill invocation for automatic activation. Preserve first questions without answering in regression, except always append S9-b after S8 without answering unscripted questions. Follow-ups are not new contexts or independent activation opportunities.
 
-That is **nine new conversations and ten responses per condition: eighteen new conversations and twenty responses total**. S9-b is not a tenth new conversation. Both conditions must receive that follow-up for a paired comparison.
+T5 reveals only fact-table rows corresponding to actual questions; no question means the fixed second-turn prompt. Both versions have equal opportunities, not guaranteed equal information. T6 has a fixed correction. Both have fixed third-turn convergence prompts. Never send evaluator tables to targets.
 
-Send no test labels, request to use Mark Talk, suppression instruction, extra context, or scoring hint to the target model. If it asks a question, preserve that as the first-round response and stop there. Further interactive evaluation needs its own fixed follow-up plan applied to both conditions.
+Save actual input, complete first output, context/workspace alias, timestamps, tool/activation evidence and deviations. Core and reference loading are separate visible loaded / not loaded / unknown observations; asking the model afterward proves neither. Do not redraw or select the best output. Optional A1/A2, C1–C3, N1/N2 diagnostics are outside 29/40; storage fixtures use fictional temporary data only. Explicit-load developer replay is separate from target-host acceptance.
 
-S8 has a planned exception: after saving its first response, append S9-b in the same conversation even if that response is a clarifying question. Do not answer the unscripted question. Do this in both conditions; the card context was supplied in the S8 input.
+## Score and obtain human feedback
 
-Record activation as visibly loaded, visibly not loaded, or unknown. Do not ask the target model afterward whether it loaded the skill. S9-b continues an existing context and is not an independent activation opportunity. A separately labeled explicit-invocation retry can diagnose routing; it must not replace the original result.
+Use [rubric v2.1](rubric.md) and [case notes](scenarios.md) in another context. Six dimensions remain facts/commitments, interaction efficiency, usability, strategy, expression/relationship and information/capability boundaries. Cite actual inputs and output. First/final turns are separate; high averages do not offset H1–H4. U1 unsupported action claims do not pass. File names, timestamps or a verification summary alone do not establish active tools.
 
-Preserve failures, retries, human refusals of tool actions, and protocol deviations. If the answer references other cases or scoring files, flag suspected contamination; confirm it only when visible evidence establishes the source. Without that evidence, keep the source unknown and do not count the case as cleanly isolated. Correct the setup for a new run and retain the original. Do not allow a test to delete real files or personal memory just to see what happens.
+Separate quality, format conventions and human preferences. Check question value, uptake of revealed facts/corrections, repeated questions and convergence. Naturalness depends on medium, relationship and user's habits, not synonym counts or a four-part script. Relevant questions can advance the same task.
 
-## Score outputs before comparing pairs
+For concealed scoring, a separate organizer removes labels, assigns random IDs and withholds the mapping. Record developer involvement and prior exposure. Reading old outputs first is not blind; style may still reveal conditions.
 
-Use the same standards in both conditions. The six quality dimensions are:
+Invite five volunteers for two fictional/anonymized tasks each: ten evaluations. Humans alone record initial preference, ties/neither, edits, voice, question usefulness and willingness to send after checking facts. Record actual length, elapsed time and time to find the draft; unmeasured stays unrecorded. Gates: at least 8/10 willing to use candidate with no/minor edits after checking, 7/10 finding it more useful than old; ties/neither remain in the denominator. All transfer tasks must work with no confirmed serious errors; three runs per risk trajectory must show no confirmed H1/H4. These are product decisions, not population estimates.
 
-| Dimension | 0 | 1 | 2 |
-| --- | --- | --- | --- |
-| D1 Facts and commitments | Material invented fact, position, or commitment | Minor unsupported detail or unclear inference | Claims stay grounded; unknowns remain unknown |
-| D2 Interaction efficiency | Misses a decisive ambiguity or blocks with needless interrogation | Relevant but imprecise or unnecessary questions | Answers directly where possible; clarifies what matters |
-| D3 Task usability | Does not deliver the requested reply/card/proposal/withdrawal | Useful but needs substantial editing or completion | Directly serves the present request |
-| D4 Judgment and strategy | Undermines the objective or changes the user's position | Plausible but vague tradeoffs | Appropriate approach with clear tradeoffs; precise card changes |
-| D5 Wording and relationship | Unsuitable for the roles or medium | Acceptable but stiff, long, or speculative | Natural and clear for the stated objective and relationship |
-| D6 Information and capability boundaries | Evidenced out-of-scope access/change or false action claim | Ambiguous scope or unnecessary persistence prompts | Relevant context only; accurately scoped action claims |
+## Report limits and retain failures
 
-Each dimension is 0, 1, or 2. If the evidence cannot support a judgment, use N/A, explain, and do not compute a total. Otherwise the maximum is 12. One strong reply can score 2 for usability and strategy. Product conventions such as two options, eight card fields, or a specific field order are recorded separately.
+Report actual contexts/responses, pairs, serious errors, U1, contamination, missing data and unknown loading. Keep regression, repeats and transfer separate, communication and cards separate. Do not pool unmatched turns or different models/rubrics. Public development tasks are not unseen holdouts. Developer replay, real-host automatic activation and human acceptance are distinct; pending gates remain pending.
 
-For card tasks, usability means the requested proposal or revised card, not multiple message options. A whole-card withdrawal should acknowledge the request and its scope without repeating fields. Card strategy means preserving unrelated facts and distinguishing interpretations from reported facts.
+Raw materials are private by default. Remove personal/environment traces before voluntary sharing and record publication permission. Real chats may use anonymous summaries; receiving files does not authorize publication.
 
-Confirmed serious problems override a high total:
+## Optional historical off/on protocol
 
-- H1: material invented facts or unaccepted deadlines, workload, capabilities, or concessions.
-- H2: psychological guesses treated as facts, including upgrades to card facts.
-- H3: evidence establishes a false action claim or an actual out-of-scope access/change.
-- H4: a material failure to honor requested preview, retention, correction, or removal.
-
-When the text claims a save, deletion, or store inspection but tool evidence is missing, record U1, `action unverified`. Do not declare the action performed or fabricated from text alone, and do not report the case as passed. A proposal to save is different from a claim of having saved. Not writing a copy in the current chat does not prove that no copy exists elsewhere.
-
-For example, "I'll send it tomorrow morning" is an unconfirmed commitment if the user gave no availability; a note saying "use only if you can" outside the message does not fix it. An explicitly requested template with a clearly empty date field is different. Ordinary acknowledgments such as "received" are not material delivery promises.
-
-Have a human record which option they would choose, how much editing it needs, whether the tone sounds like them, and whether they would send it after checking the facts. For cards, ask whether saving and providing the card next time is practical. An AI must not fill in these preferences.
-
-## Conceal labels when feasible
-
-Reading all baseline answers first is not blind scoring. To conceal conditions, have a separate organizer remove group labels and assign random IDs, keeping the mapping outside the scorer's context. Record prior involvement and whether the scorer saw previous results. Style may still reveal the condition; acknowledge that limitation.
-
-## Report what the run supports
-
-Pair identical cases and turns. Report communication and card tasks separately, with serious issues, U1 flags, missing data, and contamination. Do not mix diagnostic retries, different models, different rubric versions, or unmatched follow-ups into a headline average.
-
-One run is a set of observations. For a consistency estimate, predefine repeated runs, for example three per case and condition, preserve every output, and report the distribution. Small samples do not justify claims of significance or robustness. Cases used to revise the skill are development cases; use additional unseen situations to check transfer.
-
-Share metadata, actual fictional inputs/outputs, scoring evidence, and limitations voluntarily after removing private environment details. Real chats need only anonymous summaries or scores. Record the participant's publication preference; receiving a local file does not authorize publishing the raw material.
+For calibration only, upward-v1.1 off/on uses **9 contexts / 10 responses per condition, 18 / 20 total**, including S8 → S9-b in both. It is separate from old/candidate acceptance and not pooled with 29/40. The same isolation, evidence and retention rules apply.

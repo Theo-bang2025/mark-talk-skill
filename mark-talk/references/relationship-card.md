@@ -37,6 +37,12 @@ Return the complete card with that entry omitted. State that the revised text om
 
 ## Discard the whole card
 
-Stop using it in the current conversation and do not repeat its contents. If it is not in the supplied context, acknowledge the request without reconstructing it or searching for it. Explain the scope once: this text operation does not delete stored files or host history and cannot ensure what information a future chat receives.
+Stop using it in the current conversation and do not repeat its contents. Exclude every field, including preferences, goals and open matters, from this response and later advice. Do not offer a next task based on an old open matter. The user may later supply a fact anew; use that new input without restoring the old card.
+
+If the card is not in the supplied context, acknowledge without reconstructing or searching for it. If old card content is automatically supplied by the host after withdrawal, do not treat its presence as renewed user authorization. Explain the scope once: text withdrawal does not delete stored files or host history and cannot ensure what a future chat receives.
 
 Do not search files, claim a memory-store inspection, or infer the absence of other copies. The user may separately ask to manage a particular saved copy through available host tools; follow that distinct request and report only verified results. Ordinary communication help can continue using the facts the user supplies now.
+
+## A separately requested storage operation
+
+Ordinary "delete this card" means text withdrawal. If the user explicitly requests a named saved copy or host memory operation, use the actual host workflow and permissions, limiting the target to that request. If a storage request has no identifiable target, ask which copy or location they mean; do not search every store. A file name or rule visible in injected context is not evidence that you actively inspected it. Report the requested target, attempted action and verified result separately. Deleting one file does not establish that attachments, history or other copies were deleted.

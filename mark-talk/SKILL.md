@@ -3,40 +3,55 @@ name: mark-talk
 description: Use when a user asks how to reply, negotiate, clarify, report progress, or set boundaries with a supervisor, mentor, manager, or other leader in a workplace or academic setting, or wants to create, correct, or delete a relationship card for such a person.
 license: MIT
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Mark Talk: upward communication
 
-Help the user pursue their actual objective while speaking from their real situation. Reply in the user's language, using ordinary conversational wording. The user chooses and sends the message.
+Help the user advance a concrete upward workplace or academic communication task. Reply in the user's language. The user chooses and sends the message.
 
 ## Decide what is needed
 
-Identify the two roles, the other person's actual request, the user's objective, and what the user has confirmed they can or want to do. Distinguish reported facts from interpretations. Treat a supplied relationship card as context that the user can correct.
+Identify the roles, actual request, present objective, real progress and constraints. Keep the user's own responsibilities separate from decisions requiring the recipient's authority. A long-term goal informs advice; it need not appear in every message. Treat an active relationship card as correctable context.
 
-Ask at most two questions when missing information would change a substantive commitment, position, or decision. If a useful reply can acknowledge the situation and clarify the unknowns, draft it immediately. In a hurry, give a grounded holding reply rather than a form to fill in. Do not add routine follow-up questions after an already complete answer.
+Keep apart what the user has done, what they have confirmed they can and want to do, and unaccepted possibilities. Distinguish reported facts from interpretations. The latest explicit correction replaces an earlier assumption, without erasing unrelated facts.
+
+Ask one or two focused questions only if the answers would change the position, feasibility or persuasive basis of this draft. Briefly explain their purpose. Ask the user about their actions and availability; the recipient can be asked about their priorities, use or standards within the draft. Do not demand exhaustive self-checks before urgent help. If enough is known, draft now. In a hurry or when the user declines questions, give a short message that works on known facts. Aim to attempt a draft within two clarification rounds; unresolved gaps can remain explicit.
+
+## Choose a useful approach
+
+For a new substantive drafting task, read [upward communication methods](references/upward-methods.md) and select one or two relevant methods internally. Reuse already-read guidance during revisions. It covers progress, help, recommendations, standards, resources, constraints, criticism and follow-up. No web lookup is needed. If the file cannot be read, use the core rules and do not claim to have loaded it.
+
+Make actual work and outputs visible without inventing effects. When the facts support a recommendation, give its reason and ask for the decision the recipient owns. With no basis for a recommendation, clarify instead. Make the request easy to answer. A simple progress update may need neither a request nor a recommendation.
+
+Methods are thinking aids, not a message template. Choose content and order for this relationship, medium and user's wording. Omit unnecessary elements, combine others, and preserve useful features of the user's own draft. A chat may be two to four short sentences; a complex request can need more. Do not force four sections, a repeated opening or an A/B menu into every situation. Variation should follow context, not random synonym replacement. Use normal respect without unnecessary apology, self-belittling, flattery or coaching speeches.
 
 ## Write usable choices
 
-Default to two short, complete messages with different strategies. Add a third only when it offers a distinct choice. For each, add one brief note about the decision it serves and its tradeoff. Use headings in the user's language. A short explanation of the central issue is optional; keep the messages easy to find and copy.
+For an initial choice, default to two short, complete messages that pursue meaningfully different approaches. Add a third only for distinct strategic value. Give each a brief, specific tradeoff note. Keep the copyable messages prominent; a short explanation is optional. Honor requests for one reply, analysis only, a template, length or tone. Do not manufacture alternatives for a simple selected draft.
+
+When the user adds facts, update the draft or approach with those facts; mention what changed only if useful. Do not repeat answered questions. Once they choose a draft, revise that one by default. Shortening, softening or making it firmer must preserve facts, position, constraints and accepted commitments. If the recipient replies, work from that new message and confirm only arrangements actually agreed. After a complete answer, retain a question only when it advances this same task; do not promote unrelated work or a card.
 
 Before presenting each message, check its claims against the user's input:
 
 - Use only supplied names and titles. If a name is unknown, omit the greeting or use the known role; do not invent a surname.
 - Keep the scope of a fact intact. Two trial presentations do not establish positive feedback or readiness for launch. An unfinished task does not establish why it is unfinished.
-- Treat the other person's requested deadline as a request. A partial draft, a same-day update, a twenty-minute review, and a Monday start are commitments too. Include a substantive deadline, available time, deliverable, or action already taken only when the user has confirmed it.
+- Treat the other person's deadline as a request. Check completed actions, dates/deliverables, availability/extra effort, and concessions separately. Chasing data, a same-day update, a ten-minute call today or tomorrow, reviewing something on a phone, and starting Monday all need user support. Small extra work and flexible scheduling can be substantive commitments too.
 - Preserve the user's negotiating position. Do not offer a shorter support period, part-time help, a reduced scope, a delay, or extra work as something the user accepts unless they said so. An alternative can be put to the recipient as a question without promising that the user can execute it.
 - Describe another person's motives and possible reactions as uncertain. Avoid claims that a tactic will secure approval, prevent rework, or obtain the highest reply rate.
+- Preserve the exact scope of constraints. Being unable to redo a whole report tonight does not establish either total unavailability or willingness to chat. Use phone contact only when confirmed; respect an explicit inability to communicate.
 
 Each default message must work on the known facts by itself. A note outside it saying "only use this if..." cannot repair an invented fact or unaccepted commitment inside it. When a missing fact matters, ask about it within the message or ask the user before making the promise. Do not silently substitute estimated financial figures for missing actual data.
 
-If the user explicitly requests a reusable template, label it as requiring completion and mark the missing values. Otherwise, prefer complete wording over placeholders. Follow a request for one reply, analysis only, a shorter version, or a particular tone.
+If the user explicitly requests a reusable template, label it as requiring completion and mark missing values. Otherwise give complete wording. Do not replace a needed fact with an invented promise or a placeholder. Do not append blanket assurances such as "all versions contain no commitments"; the individual messages must withstand the check.
 
-Keep the strategy useful: show the real constraint, make the decision or request clear, and explain the relevant tradeoff. When it adds something, finish with one brief preparation tip grounded in the situation. Ordinary drafting does not need a sales pitch for another task or a relationship card.
+Keep the actual constraint and request clear. A preparation tip can help when grounded and relevant; it must not hide the reply or add an obligation on the user's behalf.
 
 ## Relationship cards and host tools
 
 For creating, viewing, correcting, updating, or discarding a card, read [relationship card rules](references/relationship-card.md). A card is optional for ordinary replies. Show revisions; the user controls which text to keep and supply next time.
+
+After whole-card withdrawal, exclude its fields and old open matters from this response and later advice. Do not use them even to offer a next task. Facts the user supplies anew can be used without reviving the old card.
 
 For drafting and text-card operations, use the supplied conversation, user-selected attachments, and skill reference files. Do not search unrelated workspace files or host memory to find a person or a supposedly missing card. A request to revise or discard card text does not authorize file deletion or memory indexing.
 

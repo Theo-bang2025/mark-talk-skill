@@ -66,6 +66,8 @@ git -C ../mark-talk-recovered switch --detach v0.2.0
 
 ## 0.3.0 候选工程
 
+2026-10-30另行修订：版本字段仍为0.3.0，新增`metadata.revision`区分同版本包。原宿主测评继续绑定d4b5032；本次反馈、文件身份和开发复测见[反馈与修补报告](../tests/reports/2026-10-29-0.3.0-human-feedback-and-refinement.md)。原安装包、10月26日空白交付包及人类填写原件分别保留，不改旧标签。
+
 本轮在 `codex/mark-talk-0.3.0` 分支接续交接提交 `c8c1dcc`，实施方案与已冻结测试的检查点为 `8b5cdfe`。源码元数据为0.3.0，仍按候选报告，不建立正式 `v0.3.0` 标签。原标签、离线ZIP和bundle不覆盖。
 
 候选技能源码提交、三个文件散列、开发回放覆盖与外部待验收项见[候选报告](../tests/reports/2026-10-21-0.3.0-candidate.md)。本地候选ZIP仅含 `mark-talk/` 三个文件；临时验证/原始输出继续留在被忽略的 `.local-eval/`，不进入公开提交。现有bundle不会自动包含后续新提交，新增恢复点由当前Git历史保留。

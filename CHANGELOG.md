@@ -1,5 +1,13 @@
 # 更新记录 / Changelog
 
+## 0.3.0 候选修订 / Candidate refinement · 2026-10-30
+
+接收一位参与者的全部10组反馈，保留候选3组获选、旧版5组、并列2组及原客观失败记录。此次小范围修补增加“承担任务＋准确限制＋可行渠道”的组织方式；批评回应以具体修正表达态度，未接受的更大工作或日期先给用户选择。紧急求助无需列举未做的排查；未完成的状态不扩写成完全没动。明确“只给最终一条”的输出形态，以及普通拟稿/表达偏好不授权文件、记忆和索引写入。
+
+版本字段保留0.3.0，新增修订日期区分旧冻结包；没有覆盖原测评或创建正式发布标签。反馈、定向复测的实际完成量与限制见[本次报告](tests/reports/2026-10-29-0.3.0-human-feedback-and-refinement.md)。
+
+Received ten paired judgments from one participant: candidate preferred in three, old in five, two ties. Targeted changes connect responsibility, precise constraints and a feasible channel; respond to criticism with concrete corrections; keep new work or dates subject to user acceptance; prioritize urgent help; and return only the requested final wording. Ordinary drafting and preference corrections do not authorize persistence. Version remains 0.3.0 with a revision date. Historical failures remain; this is not formal acceptance or a release tag.
+
 ## 0.3.0 候选 / Candidate · 2026-10-21
 
 新增随包小型向上沟通方法库，覆盖进展、求助、建议、标准、资源、约束、批评和确认。核心按当前任务选方法，必要时追问，补充后更新，选稿后默认只改一条。方法用于组织思路，最终表达按关系、媒介和个人习惯变化，允许省略和调序；润色不得改变事实、立场、约束或承诺。

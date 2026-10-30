@@ -6,7 +6,7 @@ Messages to a manager, mentor or academic supervisor often need more than polite
 
 The scope is upward workplace and academic communication: progress, help, resources, standards, constraints, criticism and confirmation. Start with one sentence; a relationship profile or full chat history is optional.
 
-**This tree contains the `0.3.0` candidate, not a formal release.** It adds eight small methods, iterative drafting and card-control fixes. Candidate Qianwen and human acceptance gates remain pending. The existing public version is [0.2.0 at a fixed commit](https://github.com/Theo-bang2025/mark-talk-skill/tree/82dd114484f0a92068c6096c4843a68202083807/mark-talk). See the [candidate evidence report](tests/reports/2026-10-21-0.3.0-candidate.md); examples are not test results.
+**This tree contains the `0.3.0` candidate, revised 2026-10-30, without a formal release.** The closed campaign retains 40 valid Codex responses and 42 deduplicated Qianwen responses. One participant completed ten paired evaluations: candidate preferred in three, old in five, with two ties. See the [human feedback and refinement report](tests/reports/2026-10-29-0.3.0-human-feedback-and-refinement.md). Repairs target visible responsibility, natural constraints, final-message convergence and persistence authorization. Historical failures and limitations remain in the [campaign summary](tests/reports/2026-10-26-0.3.0-evaluation-summary.md); formal acceptance is incomplete. The stable version remains available at the [fixed 0.2.0 commit](https://github.com/Theo-bang2025/mark-talk-skill/tree/82dd114484f0a92068c6096c4843a68202083807/mark-talk).
 
 ## Add facts, choose, then refine
 
@@ -40,10 +40,10 @@ mark-talk/
 You can ask an installation assistant:
 
 ```text
-Install the local mark-talk/ folder I provide, keeping both reference files. Check that SKILL.md says 0.3.0 and report the actual installation location and SHA-256 of all three files. State anything you cannot verify.
+Install the local mark-talk/ folder I provide, keeping both reference files. Check that SKILL.md says version 0.3.0 and revision 2026-10-30, and report the actual installation location and SHA-256 of all three files. State anything you cannot verify.
 ```
 
-An unpublished local candidate cannot be installed by assuming GitHub main contains it. For public 0.2.0 use the fixed commit above; it has no methods file. See the [getting-started guide](docs/getting-started.en.md) for paths and troubleshooting. The [official QwenWork guide](https://help.aliyun.com/zh/qwenwork/skills) describes GitHub and local installation; actual client interfaces and support need separate verification.
+Check the revision date and hashes even when two packages both say 0.3.0. The old campaign froze source d4b5032; it is distinct from this revision. For GitHub installation, verify the actual branch and commit contain the intended revision. For 0.2.0 use the fixed commit above; it has no methods file. See the [getting-started guide](docs/getting-started.en.md) for paths and troubleshooting. The [official QwenWork guide](https://help.aliyun.com/zh/qwenwork/skills) describes GitHub and local installation; actual client interfaces and support need separate verification.
 
 Enable it, open a new conversation and describe your task. If necessary in everyday use, name Mark Talk explicitly; automatic-activation tests retain the original input. You can say “give me one message now” or “use option two, firmer, without promising delivery tomorrow.” The [worked tutorial](docs/getting-started.en.md#work-through-a-reply) shows the complete interaction.
 
@@ -57,8 +57,8 @@ Withdrawal excludes old fields and matters from subsequent advice; facts you sup
 
 | Environment | What the evidence supports |
 | --- | --- |
-| Qianwen desktop work mode | Participants reported old GitHub installation and 0.2.0 local import/trials on 5.0.0.268. Round two still had commitment/card failures and shared-memory contamination. It does not establish candidate acceptance |
-| Codex | Two candidate cases on CLI 0.163.0-alpha.11 automatically read the core and corresponding references, with raw tool returns. Developer replay remains separate from full host acceptance |
+| Qianwen desktop work mode | Cross-build ecological trial on 5.0.5/5.0.7: 36 valid main-track responses, four complete version pairs, plus six separate pilot responses. Candidate T1 had no visible skill call; unsupported facts/commitments and unrequested writes remain |
+| Codex | CLI 0.163.0-alpha.11 completed 29 contexts/40 responses and six version pairs with raw rule-loading evidence, under read-only permissions. Candidate T4 still added an unaccepted work commitment; a three-call overlap is disclosed |
 | QwenWork | Official installation instructions exist; these do not establish identical interfaces or candidate loading in every Qianwen product |
 | Doubao, Yuanbao, mobile | Direct import and use remain unverified |
 

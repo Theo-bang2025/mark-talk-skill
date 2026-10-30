@@ -8,12 +8,12 @@ Install the skill, then try a small communication problem. You do not need to bu
 
 ### Qianwen desktop work mode
 
-This tree is the 0.3.0 candidate. Candidate installation has not been accepted in Qianwen. Participants reported old GitHub installation and 0.2.0 local import on 5.0.0.268; those records do not verify this candidate.
+This tree contains the 0.3.0 candidate revised on 2026-10-30. On October 26, the three files of frozen candidate d4b5032 were verified after restoration in Qianwen 5.0.7.276. Editing this source does not update that installation; the new revision has not been retested there. Check revision, commit and hashes even when version strings match. See the [latest report](../tests/reports/2026-10-29-0.3.0-human-feedback-and-refinement.md).
 
 For candidate use, take the complete `mark-talk/` from the actual source or local candidate ZIP. In a client supporting local import, ask:
 
 ```text
-Install the local mark-talk/ folder I provide, keeping references/upward-methods.md and references/relationship-card.md. Verify SKILL.md says 0.3.0, and report the actual location and all three SHA-256 hashes. State anything you cannot observe.
+Install the local mark-talk/ folder I provide, keeping references/upward-methods.md and references/relationship-card.md. Verify SKILL.md says version 0.3.0 and revision 2026-10-30, and report the actual location and all three SHA-256 hashes. State anything you cannot observe.
 ```
 
 Do not substitute GitHub main for a candidate that has not been synchronized. For public 0.2.0 use the [fixed commit folder](https://github.com/Theo-bang2025/mark-talk-skill/tree/82dd114484f0a92068c6096c4843a68202083807/mark-talk); it has no bundled methods file.

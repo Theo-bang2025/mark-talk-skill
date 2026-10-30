@@ -2,6 +2,8 @@
 
 A card is a compact piece of context the user can inspect, edit, save, and supply in another conversation. Creating card text does not create a host memory entry. Saving a copy alone does not make it available in a future chat: the user must provide it there. Use the user's language for the card and explanations.
 
+Manual save-and-paste willingness authorizes this text workflow only. A style correction during reply drafting belongs to that conversation, not a new persistent preference. Neither request authorizes writing a card file, host memory or an index. A separate explicit storage request with an identified target uses the storage workflow below.
+
 ## The complete card
 
 Return these eight fields when creating, viewing, or revising a card:

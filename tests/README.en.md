@@ -4,6 +4,10 @@
 
 The default campaign compares **0.2.0 with the 0.3.0 candidate** for task usefulness, selective clarification, iteration and natural wording, alongside facts and user control. This is a plan, not a passed result. Controlled inputs are Chinese; translations create a different test and do not establish English performance.
 
+See the [2026-10-26 final summary](reports/2026-10-26-0.3.0-evaluation-summary.md): 40 valid Codex responses, 36 Qianwen main-track responses and six separately reported Qianwen pilot responses. The user closed the two quota-interrupted Qianwen comparisons for this round. The frozen plan below remains unchanged; closure does not mean acceptance.
+
+One participant has completed all ten pairs. See the [feedback and refinement report](reports/2026-10-29-0.3.0-human-feedback-and-refinement.md) and the separate [targeted replay inputs](refinement-scenarios.md). Development wording tests do not count toward the original host campaign or replace human and Qianwen acceptance.
+
 ## Ask an AI coach
 
 Use a separate coaching conversation:

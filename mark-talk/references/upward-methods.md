@@ -19,12 +19,16 @@ Select one or two relevant units. These are internal thinking aids, not fixed sc
 
 Use for updates and recognition. Need actual outputs/actions, status, and any reported feedback. Select the evidence that answers the recipient's question; distinguish completion from testing and impact. Add an open issue or proposed next step only if relevant and supported. Sources: SBAR and SBI.
 
+Keep pending work neutral and precise: "three pages remain to migrate" need not become "I have not touched the other three." If a delivery time would help but is undecided, suggest agreeing one with the user before adding it to their message. Retain a time they have actually chosen.
+
 - Given: a guide is finished, two colleagues tried it, feedback has not arrived. Example: "The guide is finished and two colleagues have tried it. I'm still waiting for their feedback."
 - Misuse: "The guide has been validated and is ready to roll out." Trying something does not establish quality or readiness. If useful, ask what the trials revealed.
 
 ## 2. Help: ask with a clear point of need
 
 Use when blocked or urgent assistance matters. Need the actual problem and requested support; include prior attempts only when supplied. State the impact if known, then ask for something answerable. Urgency can justify asking before investigation; preparation is not an admission ticket to help. Source: SBAR.
+
+Lead an urgent request with the problem, known time or impact, and the help needed. A list of unperformed checks is unnecessary unless it changes the requested support. Omitting that list does not license inventing completed checks or a diagnosed cause.
 
 - Given: an account is inaccessible before a demo; no diagnosis yet. Example: "The demo account won't let me in. Could you help find someone with access to check it?"
 - Misuse: "I've ruled out all local causes." Do not invent diligence, blame or a repair estimate.
@@ -52,16 +56,18 @@ Use for staffing, access, time or other support. Need requested resource/duratio
 
 ## 6. Constraints: be respectful and precise
 
-Use when a requested scope, time or arrangement is infeasible or unaccepted. Need the user's exact limit and any alternative they can and want to offer. State the constraint plainly; clarify the underlying need when useful. An alternative is optional. Sources: DESC and PON concessions.
+Use when a requested scope, time or arrangement is infeasible or unaccepted. Need the user's exact limit and any alternative they can and want to offer. Connect their ongoing responsibility to the precise scope limit, then an accepted channel or a question about priorities. When a positive channel request carries the limit, use it instead of stacking refusals. An alternative is optional. Sources: DESC and PON concessions.
 
 - Given: away without a computer; cannot redo the whole report tonight; other availability unknown. Example: "I'm away without my computer, so I can't redo the whole report tonight. Which changes are most important, and when is the revised report needed?"
+- Given: still responsible for a client proposal; no computer tonight; text questions accepted, calls unavailable; no delivery date agreed. Example: "I'll continue handling the client proposal. I can't revise the whole document on my phone tonight; please send the priority changes in writing so we can clarify the focus." This accepts neither phone editing nor a new deadline.
 - Misuse: "I'm available on my phone all evening" or "I can't do anything this weekend." Neither follows. If the user says no contact tonight, do not add a call, text review or progress update. Power differences matter; wording cannot guarantee a safe reaction.
 
 ## 7. Criticism or misunderstanding: separate verified responsibility from inference
 
-Use for negative feedback or a disputed account. Need actual criticism, verified facts, and what the user wants to acknowledge or clarify. Address a real mistake without inventing broader fault. For a misunderstanding, explain the relevant fact and seek correction or a standard; avoid diagnosing motives. Sources: SBI/SBII and DESC.
+Use for negative feedback or a disputed account. Need actual criticism, verified facts, and what the user wants to acknowledge or clarify. Address a real mistake with a concrete correction within that scope, then ask about the substantive standard. For a misunderstanding, explain the relevant fact and seek correction or a standard; avoid diagnosing motives. Sources: SBI/SBII and DESC.
 
-- Given: two cited years are wrong; other citations unchecked. Example: "I checked the two references you flagged; both years are wrong. Beyond those errors, is there a particular issue in the argument you want me to focus on?"
+- Given: two cited years are wrong; user wants to address those errors and ask about the argument; other citations unchecked. Example: "I checked the two references you flagged; both years are wrong, and I'll correct them. For the argument, should I focus first on the supporting evidence or the link between the conclusion and evidence, or is there another priority?" The possible directions are questions, not a diagnosis.
+- If a full citation review could help demonstrate care, propose it briefly to the user outside the default sendable drafts. If they accept it, include that action while leaving its timing open unless confirmed. Ongoing responsibility is useful; unaccepted broader work is still a new commitment.
 - Misuse: "I've checked everything else and it's correct" or "You're only saying this because you dislike me." An apology or a correction promise should not expand responsibility or accepted work.
 
 ## 8. Confirmation and follow-up: close only the actual loop
